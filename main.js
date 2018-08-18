@@ -42,7 +42,6 @@ console.log(randomvalue.toUppercase());
 //let myVariable:unknown = 46;
 var myVariable = 46;
 console.log(myVariable.toUpperCase());
-;
 function hasName(obj) {
     return !!obj && typeof obj === 'object' && name in obj;
 }

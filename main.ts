@@ -41,7 +41,7 @@ console.log(x +'  '+y);
          // unknown type
          //let myVariable:unknown = 46;
          let myVariable:any = 46;
-         console.log((myVariable as string).toUpperCase()));
+         console.log((myVariable as string).toUpperCase());
 
 function hasName(obj:any): obj is {name}{
    return !!obj && typeof obj === 'object' && name in obj;
