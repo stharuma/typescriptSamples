@@ -36,9 +36,10 @@ randomvalue = true;
 randomvalue = 'stharuma';
 //any variable type work with following print messages
 console.log(randomvalue.name);
-console.log(randomvalue());
+//console.log(randomvalue());
 console.log(randomvalue.toUppercase());
 // unknown type
+//let myVariable:unknown = 46;
 var myVariable = 46;
 console.log(myVariable.toUpperCase());
 ;
@@ -48,3 +49,19 @@ function hasName(obj) {
 if (hasName(myVariable)) {
     console.log(myVariable.name);
 }
+var result;
+result = 10;
+result = 'stharuma';
+result = false;
+var answer = 'no';
+// answer =19;//Type '19' is not assignable to type 'string'.
+answer = 'yes';
+// union type
+var multyType;
+multyType = 10;
+multyType = true; // inteligence support
+//multyType='sss';//Type '"sss"' is not assignable to type 'number | boolean'.
+var anyType;
+anyType = 19;
+anyType = true;
+anyType = 'sssss'; // no inteligence support
