@@ -20,4 +20,11 @@ function fullNameUsingOptionalLastname(person) {
         return person.firstname + " " + person.lastname;
     return person.firstname;
 }
+function fullNameUsingOptionalparam(person) {
+    if (person.lastname)
+        // return person.firstname +" "+ person.lastname;
+        return person.firstname + " " + person.lastname;
+    return "" + person.firstname;
+}
 console.log(fullNameUsingOptionalLastname(p1));
+console.log(fullNameUsingOptionalparam(p1));

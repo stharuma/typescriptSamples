@@ -27,8 +27,16 @@ function fullNameUsingInterface(person:person):string{
 function fullNameUsingOptionalLastname(person:personOptionalLastname):string{
     if(person.lastname)
        return person.firstname +" "+ person.lastname;
-    return person.firstname;   
+    return person.firstname   
+ }
+
+ function fullNameUsingOptionalparam(person:personOptionalLastname):string{
+    if(person.lastname)
+      // return person.firstname +" "+ person.lastname;
+      return `${person.firstname} ${person.lastname}`;
+    return `${person.firstname}`;   
  }
 
 console.log(fullNameUsingOptionalLastname(p1));
+console.log(fullNameUsingOptionalparam(p1));
 
