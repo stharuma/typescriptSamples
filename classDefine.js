@@ -20,6 +20,9 @@ var Employee = /** @class */ (function () {
     Employee.prototype.greet = function () {
         console.log("Good morning " + this.employeeName);
     };
+    Employee.prototype.getEmployeeName = function () {
+        return this.employeeName;
+    };
     return Employee;
 }());
 var emp1 = new Employee('stharuma');
@@ -33,8 +36,30 @@ var Manager = /** @class */ (function (_super) {
     Manager.prototype.delegateWork = function () {
         console.log("Manager " + this.employeeName + " can delegate task");
     };
+    Manager.prototype.getManagerName = function () {
+        return this.getEmployeeName();
+    };
     return Manager;
 }(Employee));
 var m1 = new Manager('Jalan');
 m1.greet();
 m1.delegateWork();
+console.log(m1.getManagerName());
+// default public 
+// default method as public method
+var Student = /** @class */ (function () {
+    function Student(name, age) {
+        this.studentName = name;
+        this.age = age;
+    }
+    Student.prototype.studentInfo = function () {
+        return "Student nane is " + this.studentName + " and his/her age is " + this.age;
+    };
+    Student.prototype.getStudentName = function () {
+        return this.studentName;
+    };
+    return Student;
+}());
+var s = new Student('stharuma', 23);
+console.log(s.studentInfo());
+//console.log(s.getStudentName());// private nethode not access outside world
